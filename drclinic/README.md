@@ -4,16 +4,36 @@ This project is a web application for DrClinic, designed to present information 
 
 ## Project Structure
 
--   `frontend/`: Contains the HTML, CSS, and JavaScript for the client-side application.
+-   `frontend/`: Contains the React (Vite) single-page application styled with Tailwind CSS.
 -   `backend/`: Contains the Node.js/Express backend application for handling enquiries.
 
 ## Frontend
 
-The frontend consists of:
--   **Home Page (`frontend/index.html`):** Displays clinic information, doctor's credentials, services, and 24/7 availability.
--   **Enquiry Page (`frontend/enquiry.html`):** Provides a form for users to submit their details and messages.
+The frontend is a single-page application (SPA) built with [React](https://reactjs.org/) (using [Vite](https://vitejs.dev/)) and styled with [Tailwind CSS](https://tailwindcss.com/). It uses [React Router](https://reactrouter.com/) for navigation.
 
-To view the frontend, open the `frontend/index.html` file in a web browser.
+### Frontend Setup and Development
+
+1.  **Navigate to the frontend directory:**
+    ```bash
+    cd drclinic/frontend
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    This will typically start the development server on `http://localhost:5173/` (Vite's default, but it might vary). Open this URL in your browser to view the application. The server supports Hot Module Replacement (HMR) for a fast development experience.
+
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+    This command will create a `dist` folder in `drclinic/frontend` containing the optimized static assets for deployment.
 
 ## Backend
 
