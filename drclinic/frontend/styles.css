@@ -1,0 +1,115 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Added for some spacing from top */
+    margin-bottom: 20px; /* Added for some spacing from bottom */
+}
+
+/* Header/Navigation */
+h1 { /* Applied to main page titles like DrClinic and Enquiry */
+    text-align: center;
+    color: #0056b3;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0056b3;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Sections (on index.html) */
+section h2 { /* More specific selector for section titles */
+    color: #0056b3;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 20px; /* Spacing for sections */
+}
+
+section p {
+    margin-bottom: 10px; /* Spacing for paragraphs within sections */
+}
+
+/* Enquiry Form (enquiry.html) */
+form div { /* Style for div wrapping label and input */
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    display: block;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Spacing above button */
+}
+
+form button[type="submit"]:hover {
+    background-color: #004080;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px; /* Example: Adjust header font size */
+    }
+
+    section h2 {
+        font-size: 20px; /* Example: Adjust section title font size */
+    }
+
+    form button[type="submit"] {
+        width: 100%; /* Make button full width on smaller screens */
+    }
+}
