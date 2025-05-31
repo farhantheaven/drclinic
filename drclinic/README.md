@@ -5,7 +5,7 @@ This project is a web application for DrClinic, designed to present information 
 ## Project Structure
 
 -   `frontend/`: Contains the HTML, CSS, and JavaScript for the client-side application.
--   `backend/`: Contains the Flask (Python) backend application for handling enquiries.
+-   `backend/`: Contains the Node.js/Express backend application for handling enquiries.
 
 ## Frontend
 
@@ -17,7 +17,7 @@ To view the frontend, open the `frontend/index.html` file in a web browser.
 
 ## Backend
 
-The backend is a Flask application that handles enquiry form submissions.
+The backend is a Node.js/Express application that handles enquiry form submissions.
 
 ### Setup and Running the Backend
 
@@ -26,22 +26,16 @@ The backend is a Flask application that handles enquiry form submissions.
     cd backend
     ```
 
-2.  **Create a virtual environment (recommended):**
+2.  **Install dependencies:**
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    npm install
     ```
 
-3.  **Install dependencies:**
+3.  **Run the Express application:**
     ```bash
-    pip install -r requirements.txt
+    node server.js
     ```
-
-4.  **Run the Flask application:**
-    ```bash
-    python app.py
-    ```
-    The backend will typically start on `http://127.0.0.1:5000/`.
+    The backend will typically start on `http://localhost:3000/`.
 
 ### API Endpoints
 
@@ -49,7 +43,7 @@ The backend is a Flask application that handles enquiry form submissions.
 
 ### Email Notification
 
-**Note:** The email sending functionality in `backend/app.py` is currently a placeholder. It prints the enquiry details to the console instead of sending an actual email. To implement actual email sending, the `send_enquiry_email` function in `app.py` needs to be updated with appropriate email server configurations (e.g., using `smtplib` or an email API service).
+**Note:** The email sending functionality in `backend/server.js` is currently a placeholder. It prints the enquiry details to the console instead of sending an actual email. To implement actual email sending, the `sendEnquiryEmail` function in `server.js` needs to be updated with appropriate email server configurations (e.g., using a library like Nodemailer and an email API service).
 
 ## Services Offered (Placeholder)
 
